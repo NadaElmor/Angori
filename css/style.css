@@ -1,0 +1,403 @@
+/* =========general========== */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  font-family: "Open Sans", sans-serif;
+}
+.rose-color {
+  color: var(--rose-color);
+}
+
+h2,
+h3,
+h4,
+a,
+p {
+  font-family: "Poppins", sans-serif;
+}
+h2 {
+  font-weight: 700;
+  font-size: 38px;
+}
+p {
+  color: gray;
+}
+:root {
+  --rose-color: #f25454;
+}
+.head-title h3 {
+  font-size: 70px;
+}
+.head-title h2 {
+  transform: translatey(-150%);
+}
+
+.head-title {
+  position: relative;
+}
+.head-title::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 1px;
+  background-color: black;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.5s;
+}
+.head-title:hover::after {
+  width: 70px;
+}
+.main-btn {
+  background-color: var(--rose-color);
+  padding: 15px 25px;
+  transition: background-color 0.4s;
+}
+.main-btn:hover {
+  background-color: #f38383;
+}
+/* ============start setting icon========== */
+.setting .icon-setting {
+  position: fixed;
+  top: 20%;
+  left: 0;
+  background-color: #222222;
+  color: white;
+  z-index: 99;
+  padding: 10px;
+  border-radius: 0 3px 3px 0;
+  transition: background-color 0.5s, curser 0.5s;
+}
+.setting .icon-setting:hover {
+  background-color: gray;
+  cursor: pointer;
+}
+/* ============end setting icon========== */
+
+/* ============start scroll icon========== */
+.scroll-icon span {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 50px;
+  border-radius: 20px;
+  border: solid 1px white;
+}
+.scroll-icon span::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  animation: up-down 2s infinite;
+}
+@keyframes up-down {
+  0% {
+    top: 10%;
+  }
+  100% {
+    top: 80%;
+  }
+}
+
+/* ============end scroll icon========== */
+
+/* ============start navbar========== */
+nav {
+  z-index: 999;
+}
+nav .nav-item a.nav-link {
+  font-size: 15px;
+  font-weight: 600px;
+  color: black;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-lin,
+nav .nav-item a.nav-link:hover {
+  color: var(--rose-color);
+}
+nav .main-icons li a {
+  color: black;
+  margin: 0px 10px;
+  transition: color 0.5s;
+}
+nav .main-icons li a:hover {
+  color: var(--rose-color);
+}
+/* ============end navbar========== */
+
+/* ============start home========== */
+header .home-item1 {
+  background: url(../images/images/slideshow-1.jpg) fixed no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+header .home-item2 {
+  background: url(../images/images/slideshow-2.jpg) fixed no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+header .home-item3 {
+  background: url(../images/images/slideshow-3.jpg) fixed no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+header h1 {
+  font-size: 70px;
+  font-weight: 700;
+}
+header .m-icon {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  padding: 10px;
+  border: solid 1px white;
+  border-left: none;
+}
+header .mr-icon {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  padding: 10px;
+  border: solid 1px white;
+  border-left: none;
+  border-top: none;
+}
+
+/* ============end home========== */
+
+/* ============start section 2 about========== */
+
+#about .progress {
+  height: 5px;
+}
+#about .progress-bar {
+  background-color: var(--rose-color);
+}
+#about .first-progress .progress-bar {
+  width: 85%;
+  animation: move-width 1s alternate;
+}
+@keyframes move-width {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+#about h3.w-1 {
+  width: 75%;
+}
+/* second */
+#about .second-progress .progress-bar {
+  width: 95%;
+  animation: move-widthh 1s alternate;
+}
+@keyframes move-widthh {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 95%;
+  }
+}
+#about h3.w-2 {
+  width: 90%;
+}
+/* third */
+#about .third-progress .progress-bar {
+  width: 85%;
+  animation: move-widthh 1s;
+}
+@keyframes move-widthh {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 85%;
+  }
+}
+#about h3.w-3 {
+  width: 80%;
+}
+/* fourth */
+#about .fourth-progress .progress-bar {
+  width: 70%;
+  animation: move-widthh 1s;
+}
+@keyframes move-widthh {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+#about h3.w-4 {
+  width: 65%;
+}
+/* ============end section 2 about========== */
+
+/* ============start section 3 team========== */
+#team .team-layer {
+  background-color: #f25454bf;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s;
+  opacity: 0;
+}
+#team .team-image {
+  position: relative;
+  overflow: hidden;
+}
+#team .item {
+  position: relative;
+}
+#team .icon i {
+  font-size: 25px;
+  color: white;
+  padding: 0px 5px;
+}
+#team .icon i:hover {
+  cursor: pointer;
+}
+#team img {
+  transition: transform 0.6s ease;
+}
+#team .team-image:hover img {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+#team .team-image:hover .team-layer {
+  opacity: 1;
+}
+#team .item:hover {
+  color: var(--rose-color);
+}
+
+/* ============end section 3 team========== */
+
+/* ============start section 4 services========== */
+#services {
+  background-color: #fafafa;
+}
+#services .item {
+  transition: color 0.5s;
+}
+#services .item:hover {
+  color: var(--rose-color);
+}
+
+/* ============end section 4 services========== */
+
+/* ============start section 5 blog========== */
+
+#blog .carousel-indicators [data-bs-target] {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+#blog .carousel-indicators :nth-child(1) {
+  background-image: url(../images/images/client-1.png);
+  background-size: cover;
+}
+#blog .carousel-indicators :nth-child(2) {
+  background-image: url(../images/images/client-2.png);
+  background-size: cover;
+}
+#blog .carousel-indicators :nth-child(3) {
+  background-image: url(../images/images/client-3.png);
+  background-size: cover;
+}
+#blog .carousel-indicators :nth-child(4) {
+  background-image: url(../images/images/client-4.png);
+  background-size: cover;
+}
+#blog .carousel-indicators :nth-child(5) {
+  background-image: url(../images/images/client-5.png);
+  background-size: cover;
+}
+#blog .carousel-indicators :nth-child(6) {
+  background-image: url(../images/images/client-6.png);
+  background-size: cover;
+}
+
+/* ============end section 5 blog========== */
+
+/* ============start section 6 contact========== */
+
+/* ============end section 6 contact========== */
+
+/* ============start section 6 contact========== */
+#contact .contact-info {
+  background: url(../images/images/dotted-map.png) no-repeat;
+  background-size: cover;
+  background-color: #222222;
+}
+#contact .contact-info .item a {
+  text-decoration: none;
+  color: gray;
+  display: block;
+}
+#contact .contact-info a:hover {
+  color: var(--rose-color);
+}
+#contact .contact-info .tags a {
+  color: gray;
+  border: solid 1px gray;
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px 5px;
+  transition: color 0.5s, border-color 0.5;
+}
+#contact .contact-info .tags a:hover {
+  color: var(--rose-color);
+  border-color: var(--rose-color);
+}
+#contact .contact-info .up {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ea6363;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  color: white;
+  transform: translateY(-150%);
+  transition: background-color 0.4s;
+}
+#contact .contact-info .up:hover {
+  background-color: var(--rose-color);
+}
+/* ============end section 6 contact========== */
+
+/* ============start footer========== */
+footer {
+  background-color: #1a1a1a;
+}
+footer .icons a {
+  color: white;
+  padding: 0px 10px;
+}
+footer a {
+  color: white;
+  transition: color 0.4s;
+}
+footer a:hover {
+  color: var(--rose-color);
+}
+/* ============end footer========== */
